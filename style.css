@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+
+body{
+    text-align: center;
+    background-color: #494d5f;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+h1{
+    padding: 20px;
+    color: #e5eaf5;
+}
+
+.cards{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards .card{
+    height: 200px;
+    width: 400px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+
+    transition: transform 0.5s ease;
+   
+    
+}
+
+
+.cards .card:nth-of-type(even){
+   
+    background-color: #845bb3;
+    color: #e5eaf5;
+    box-shadow: -3px 3px 6px black;
+
+    transform: translateX(400%);
+}
+
+.cards .card:nth-of-type(odd){
+    background-color: #a0d2eb;
+    color:#494d5f;
+    box-shadow: 3px 3px 6px black;
+
+    transform: translateX(-400%);
+
+}
+
+.cards .card.show:nth-of-type(even){
+    transform: translateX(0);
+}
+.cards .card.show:nth-of-type(odd).show{
+    transform: translateX(0);
+}
